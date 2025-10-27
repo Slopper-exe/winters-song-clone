@@ -1,4 +1,5 @@
 /* This is app/layout.js */
+import './globals.css'; // <-- This tells it to use your new style file
 
 export const metadata = {
   title: "Winter's Song - The Music of Westeros",
@@ -10,41 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
-        
-        {/* --- Global Styles --- */}
-        <style jsx global>{`
-          /* Reset and basic styles */
-          html,
-          body {
-            padding: 0;
-            margin: 0;
-            /* Using a more "epic" serif font for the theme */
-            font-family: Georgia, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-              Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
-              'Helvetica Neue', sans-serif;
-            background-color: #000;
-            color: #fff;
-          }
-
-          a {
-            color: inherit;
-            text-decoration: none;
-          }
-          
-          a:hover {
-            text-decoration: underline;
-            color: #75d1ff; /* Icy Blue */
-          }
-
-          * {
-            box-sizing: border-box;
-          }
-
-          button {
-            font-family: inherit;
-            cursor: pointer;
-          }
-        `}</style>
+        {/* The old <style jsx global> tag is gone! */}
       </body>
     </html>
   );
